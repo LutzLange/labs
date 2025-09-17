@@ -29,7 +29,7 @@ kubectl get pod -n kagent
 
 Use Port Forward to access the UI
 ```
-kubectl -n kagent port-forward service/kagent-ui 8080:80
+kubectl -n kagent port-forward service/kagent-ui 8080:80 >/dev/null 2>&1 &
 ```
 
 Access the Kagent UI with your Browser through [http://localhost:8080]{http://localhost:8080}
