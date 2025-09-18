@@ -69,6 +69,7 @@ kubectl port-forward svc/kiali 20001:20001 -n istio-system >/dev/null 2>&1 &
 
 You can now access Kiali on localhost port 20001.
 
+<img width="2429" height="1152" alt="Screenshot from 2025-09-18 13-46-45" src="https://github.com/user-attachments/assets/86f0a027-4a8a-48e2-b591-2f456279c28b" />
 
 
-``
+
