@@ -17,6 +17,11 @@ export KAGENT_VERSION=0.6.12
 curl -s https://raw.githubusercontent.com/kagent-dev/kagent/refs/heads/main/scripts/get-kagent | bash -s -- --version $KAGENT_VERSION
 ```
 
+Configure OPEN_AI_KEY
+```
+export OPEN_AI_KEY=XXXX
+```
+
 Install with the kagent CLI:
 ```
 kagent install
