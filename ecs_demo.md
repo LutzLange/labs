@@ -49,6 +49,15 @@ EOF
 ```
 . eks_config.sh
 eval "echo \"$(cat manifests/eks-cluster.yaml)\"" | eksctl create cluster --config-file -
-``
+```
+
+   
+5. Deploy the Kubernetes Gateway API CRD   
+
+Sep-2025
+```
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.3.0/standard-install.yaml
+```
+
 
 
