@@ -46,10 +46,16 @@ EOF
 
 4. Load Config and Create eks cluster
 
+Initial EKS cluster setup takes ~15min
 ```
 . eks_config.sh
 eval "echo \"$(cat manifests/eks-cluster.yaml)\"" | eksctl create cluster --config-file -
 ```
+
+We need to update the vpc-cni after initial setup
+```
+eksctl update addon --cluster ambientdemo --name vpc-cni
+``
 
    
 5. Deploy the Kubernetes Gateway API CRD   
