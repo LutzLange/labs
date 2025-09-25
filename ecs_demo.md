@@ -1,6 +1,8 @@
 ### This is an ECS Demo based on 
 https://github.com/solo-io/ecs-demo
 
+This guide was tested with tool installed locally on an Ubuntu 24.04 LTS. 
+
 1. Install aws cli
 
 ```
@@ -14,7 +16,11 @@ https://github.com/solo-io/ecs-demo
   aws configure sso
 ```
 
-2. Install eksctl
+2. Configure AWS KEYS
+
+You will need AWS Key in your session to be able to run eksctl. Stick them in your ~/.bashrc
+   
+4. Install eksctl
 
 Check for the lates version on [https://github.com/eksctl-io/eksctl/releases](
 https://github.com/eksctl-io/eksctl/releases)
@@ -25,4 +31,24 @@ sudo mv eksctl /usr/local/bin/
 eksctl version
 ```
 
-3. 
+3. Create the Configuration for EKS
+
+```
+cat >eks_config.sh <<EOF
+export AWS_REGION=eu-central-1        # The AWS region where the cluster will be deployed
+export OWNER_NAME=$(whoami)        # The name of the cluster owner (auto-fills with your username)
+export EKS_VERSION=1.33            # Version of EKS to be used for the cluster
+export CLUSTER_NAME=ambientdemo    # Name of the EKS cluster. The ECS cluster will be ecs-$CLUSTER_NAME
+export NUMBER_NODES=2              # The number of nodes in your EKS cluster
+export NODE_TYPE="t2.medium"       # The instance type for the nodes in the EKS cluster
+EOF
+```
+
+4. Load Config and Create eks cluster
+
+```
+. eks_config.sh
+eval "echo \"$(cat manifests/eks-cluster.yaml)\"" | eksctl create cluster --config-file -
+``
+
+
