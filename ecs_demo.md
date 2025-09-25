@@ -13,3 +13,16 @@ https://github.com/solo-io/ecs-demo
   aws version
   aws configure sso
 ```
+
+2. Install eksctl
+
+Check for the lates version on [https://github.com/eksctl-io/eksctl/releases](
+https://github.com/eksctl-io/eksctl/releases)
+```
+curl -LO https://github.com/eksctl-io/eksctl/releases/download/v0.214.0/eksctl_Linux_amd64.tar.gz
+tar -xvzf eksctl_Linux_amd64.tar.gz 
+sudo mv eksctl /usr/local/bin/
+eksctl version
+```
+
+3. 
