@@ -55,7 +55,7 @@ eval "echo \"$(cat manifests/eks-cluster.yaml)\"" | eksctl create cluster --conf
 We need to update the vpc-cni after initial setup
 ```
 eksctl update addon --cluster ambientdemo --name vpc-cni
-``
+```
 
    
 5. Deploy the Kubernetes Gateway API CRD   
