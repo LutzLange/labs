@@ -58,12 +58,19 @@ eksctl update addon --cluster ambientdemo --name vpc-cni
 ```
 
    
-5. Deploy the Kubernetes Gateway API CRD   
+5. Deploy the Kubernetes Gateway API CRD
 
 Sep-2025
 ```
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.3.0/standard-install.yaml
 ```
+   
+7. Install istioctl from solo
 
+Got to the [Solo Support Page for installing the solo version of istio](https://support.solo.io/hc/en-us/articles/4414409064596-Istio-images-built-by-Solo-io)
+Follow the instructions to install istioctl.
+
+8. 
+9. 
 
 
