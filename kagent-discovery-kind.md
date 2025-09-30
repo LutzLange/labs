@@ -13,7 +13,7 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 
 Install kagent CLI:
 ```
-export KAGENT_VERSION=0.6.12
+export KAGENT_VERSION=0.6.16
 curl -s https://raw.githubusercontent.com/kagent-dev/kagent/refs/heads/main/scripts/get-kagent | bash -s -- --version $KAGENT_VERSION
 ```
 
